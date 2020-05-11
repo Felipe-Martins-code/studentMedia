@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/meu.css">
+    
+    <title>Sistemas notas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card border-left-primary shadow py-2">
+            <div class="col-xs-8">
+                <div class="card-body">
+                    <div class="card-header"><h3>Média Alunos</h3></div>
+                        <div class="col-xl-12 col-md-4 mb-4">
+                            <form action="notas.html" class="form-group">
+                                <fieldset>
+                                    <div class="container margen">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-md-4 mb-4">
+                                                <label for="nomeAluno">Nome: </label>
+                                                <input type="text" class="form-control" id="nomeAluno" placeholder="Nome do Aluno">
+
+                                                <label for="turmaAluno" class="margen"> Turma: </label>
+                                                <input type="text" class="form-control" id="turmaAluno" placeholder="Turma do Aluno">
+                                            </div>
+                                            
+                                                <div class="col-xl-2 bord">
+                                                    <label for="nota1">1º nota: </label>
+                                                    <input type="text" class="form-control" id="nota1">
+                                                </div>
+                                                <div class="col-xl-2">
+                                                    <label for="nota2">2º nota: </label>
+                                                    <input type="text" class="form-control" id="nota2">
+                                                </div>
+                                                <div class="col-xl-2">
+                                                    <label for="nota3">3º nota: </label>
+                                                    <input type="text" class="form-control" id="nota3">
+                                                </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- Botão para acionar modal -->
+                                <button type="button" id="btn-media" class="btn btn-primary bord-btn" data-toggle="modal" data-target="#modalMedia" onclick="mediaAluno()">Calcular</button>
+                            </form>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="modalMedia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-left-danger">
+                <h5 class="modal-title" id="exampleModalLabel">Média final</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body border-left-danger">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-bomb fa-color"></i>
+                        </div>
+                        <div class="col-xl-9">
+                            <p class="P-size" id="reprovado">  </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-left-danger">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--Modal Aprovado-->
+        <div class="modal fade" id="modalAprovado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-left-success">
+                <h5 class="modal-title" id="exampleModalLabel">Média final</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body border-left-success">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-check-circle fa-approved-color"></i>
+                        </div>
+                        <div class="col-xl-9">
+                            <p class="P-size" id="aprovado">  </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-left-success">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
